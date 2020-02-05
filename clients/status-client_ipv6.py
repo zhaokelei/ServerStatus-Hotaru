@@ -152,7 +152,7 @@ if __name__ == '__main__':
 	while 1:
 		try:
 			print("Connecting...")
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			s = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
 			s.connect((SERVER, PORT))
 			data = s.recv(1024)
 			if data.find("Authentication required") > -1:
